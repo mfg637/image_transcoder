@@ -1,6 +1,7 @@
 import pathlib
 import pyimglib
 import argparse
+import config
 
 if __name__ == '__main__':
     argument_parser = argparse.ArgumentParser()
