@@ -11,7 +11,7 @@ if __name__ == '__main__':
     outdir: pathlib.Path = getattr(args, 'output-directory')
     image_files: list[pathlib.Path] = getattr(args, 'source-images')
     for image_file in image_files:
-        transcoder = pyimglib.transcoding.get_file_transcoder(str(image_file), str(outdir), image_file.stem, {}, {})
+        transcoder = pyimglib.transcoding.get_file_transcoder(str(image_file), outdir, image_file.stem, {}, {})
         print(image_file, transcoder)
         transcoder.transcode()
 
